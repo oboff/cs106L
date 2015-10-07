@@ -22,6 +22,25 @@ void PrintTableBody() {
     }
 }
 
+void PrintTableBody2() {
+    ifstream input("data.txt");
+    int rowNumber = 0;
+
+    //while(true) {
+        int intValue;
+        double doubleValue;
+        //input >> intValue >> doubleValue;
+        
+        while(input >> intValue >> doubleValue) {
+            //if(input.fail()) break;
+            cout << setw(COLUMN_WIDTH) << (rowNumber + 1) << " | ";
+            cout << setw(COLUMN_WIDTH) << intValue << " | ";
+            cout << setw(COLUMN_WIDTH) << doubleValue << endl;
+            rowNumber++;
+        }
+    //}
+}
+
 void PrintTableHeader() {
     for (int column = 0; column < NUM_COLUMNS -1; ++column) {
         cout << setfill('-') << setw(COLUMN_WIDTH) << "" << "-+-";
@@ -31,6 +50,7 @@ void PrintTableHeader() {
 
 int main(void) {
     PrintTableHeader();
-    PrintTableBody();
+    //PrintTableBody();
+    PrintTableBody2();
     return 0;
 }
