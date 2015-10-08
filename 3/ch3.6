@@ -1,0 +1,43 @@
+6. Modify the code for GetInteger to create a function GetReal that reads a real number from the
+user. How much did you need to modify to make this code work?
+
+Answer:
+string GetLine() {
+   string result;
+   getline(cin, result);
+   return result;
+}
+
+int GetInteger() {
+    while(true) {
+        streamstring converter;
+        converter << GetLine();
+        
+        int result;
+        if(converter >> result) {
+            char remaining;
+            if(converter >> remaining)
+                cout << "Too many chars: " << remaining << endl;
+            else
+                return result;
+        } else
+            cout << "Retry: ";
+    }
+}
+
+float GetReal() {
+    while(true) {
+        streamstring converter;
+        converter << GetLine();
+        
+        float result;
+        if(converter >> result) {
+            char remaining;
+            if(converter >> remaining)
+                cout << "Too many chars: " << remaining << endl;
+            else
+                return result;
+        } else
+            cout << "Retry: ";
+    }
+}

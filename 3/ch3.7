@@ -1,0 +1,21 @@
+7. Using the code for GetInteger and the boolalpha stream manipulator, write a function
+GetBoolean that waits for the user to enter “true” or “false” and returns the corresponding
+boolean value.
+
+Answer:
+bool GetBoolean() {
+    while(true) {
+        stringstream converter;
+        bool result;
+        
+        converter << boolalpha << GetLine();
+        if(converter >> result) {
+            char remaining;
+            if(converter >> remaining)
+                cout << "Too many characters: " << remaining << endl;
+            else
+                return result;
+        } else 
+            cout << "Retry: ";
+    }
+}
