@@ -1,0 +1,19 @@
+8. In common usage, numbers are written in decimal or base 10. This means that a string of digits is
+interpreted as a sum of multiples of powers of ten. For example, the number 137 is 1·100 + 3·10 +
+7·1, which is the same as 1·10 2 + 3·10 1 + 7·10 0 . However, it is possible to write numbers in other
+bases as well. For example, octal, or base 8, encodes numbers as sums of multiples of powers of
+eight. For example, 137 in octal would be 1·8 2 + 3·8 1 + 7·8 0 = 64 + 24 + 7 = 95 in decimal. *
+Similarly, binary, or base 2, uses powers of two.
+When working in a particular base, we only use digits from 0 up to that base. Thus in base 10 we
+use the digits zero through nine, while in base five the only digits would be 0, 1, 2, 3, and 4. This
+means that 57 is not a valid base-five number and 93 is not a valid octal number. When working in
+bases numbered higher than ten, it is customary to use letters from the beginning of the alphabet
+as digits. For example, in hexadecimal, or base 16, one counts 0, 1, 2, ..., 9, A, B, C, D, E, F, 10. This
+means that 3D45E is a valid hexadecimal number, as is DEADBEEF or DEFACED.
+Write a function HasHexLetters that accepts an int and returns whether or not that integer's
+hexadecimal representation contains letters. (Hint: you'll need to use the hex and dec stream
+manipulators in conjunction with a stringstream . Try to solve this problem without brute-forcing
+it: leverage off the streams library instead of using loops.) ♦
+
+Answer:
+
