@@ -36,13 +36,14 @@ bool HasHexLetters(int myInt) {
         pow16 = i;
     }
     for(int i=pow16; myInt > 0; i--) {
-        cout << "myInt: " << myInt << endl;
+            cout << "myInt: " << myInt << endl;
         int coeff = (int)(myInt/pow(16,i));
-        cout << "coeff: " << myInt << "/" << "pow(16, " << i << ")" << " = " << coeff << endl;
-        if(coeff>9) return HasHex = true;
-        cout << "delta: " << myInt;
+            cout << "coeff: " << myInt << "/" << "pow(16, " << i << ")" << " = " << coeff << endl;
+        if(coeff>9) 
+            return HasHex = true;
+            cout << "delta: " << myInt;
         myInt = myInt - (coeff*pow(16,i));
-        cout << " - (" << coeff << "*" << pow(16,i) << ") = " << myInt << endl;
+            cout << " - (" << coeff << "*" << pow(16,i) << ") = " << myInt << endl;
 
     }
 
